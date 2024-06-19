@@ -1,0 +1,50 @@
+server:
+  port: 8081
+  tomcat:
+    max-swallow-size: -1
+  error:
+    include-exception: true
+    include-stacktrace: ALWAYS
+    include-message: ALWAYS
+  servlet:
+    context-path: /fansAgent
+  compression:
+    enabled: true
+    min-response-size: 1024
+    mime-types: application/javascript,application/json,application/xml,text/html,text/xml,text/plain,text/css,image/*
+agent:
+  agentIdFilePath: c://rpa//agentId.txt
+  agentPath: c://rpa
+  server: http://localhost/fansAdmin
+google:
+  credentialsPath: /Users/nemo/fans/fbdata-415411-2e8cb66bfb6e.json
+  account: test@uma313.net
+  sheet:
+    fbPost: 1
+    fbPostData: 1
+    fbActive: 1
+    fbAddFriend: 1
+    fbFriendData: 1
+    fbSendMsg: 1
+    fbMsgData: 1
+    fbMyInfo: 1
+    fbCrawList: 1
+    fbSearchFans: 1
+    fbSearchFansRet: 1
+    fbSearchFansTmp: 1
+    accountSheet: 1
+ai:
+  sdPath: http://localhot/clientApi
+  gptPath: http://localhot/gpt
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  jpa:
+    open-in-view: false
+  aop:
+    proxy-target-class: true
